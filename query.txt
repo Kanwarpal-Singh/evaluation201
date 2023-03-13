@@ -1,0 +1,4 @@
+AGGREGATION - VENDORS AND THEIR SALES
+
+1.db.sales.createIndex({userid:1})
+2.
