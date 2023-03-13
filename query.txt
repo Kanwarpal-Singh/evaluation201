@@ -1,4 +1,5 @@
 AGGREGATION - VENDORS AND THEIR SALES
 
 1.db.sales.createIndex({userid:1})
-2.
+2.db.vendors.aggregate([{$lookup:{from:"sales",localfield:"sales_iddb.sales.createIndex({userid:1})",foreingnField:"userid",as:"sales"}},{$project:{name:1,city:1,sales:{$map:{input:"$sales",as:"sale",in:{_id:"$$sale._id",item:"$$sale.item",profit:"$$sale.profit"}}}}}])
+3.
